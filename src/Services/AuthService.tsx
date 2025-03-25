@@ -2,7 +2,7 @@ import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 import { removeUser } from "../Slices/UserSlice";
 
-const BASE_URL = "http://localhost:8080/auth/"; // Ensure this is correct
+const BASE_URL = "http://3.110.42.137:8080/auth/"; // Ensure this is correct
 
 /**
  * Logs in the user by sending credentials to the backend.
