@@ -2,7 +2,7 @@ import axios from "axios";
 import { navigateToLogin } from "../Services/AuthService";
 
 const axiosInstance = axios.create({
-    baseURL: "http://3.110.42.137:8080", // Ensure this is correct
+    baseURL: "https://3.110.42.137", // Ensure this is correct
 });
 
 // ✅ Request Interceptor (Attach JWT Token)
