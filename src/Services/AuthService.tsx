@@ -2,7 +2,7 @@ import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 import { removeUser } from "../Slices/UserSlice";
 
-const BASE_URL = "https://3.110.42.137/auth/"; // Ensure this is correct
+const BASE_URL = "https://private-job-portal.onrender.com/auth/"; // Ensure this is correct
 
 /**
  * Logs in the user by sending credentials to the backend.
