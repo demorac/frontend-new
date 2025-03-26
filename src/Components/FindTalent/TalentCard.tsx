@@ -25,7 +25,7 @@ const TalentCard = (props: any) => {
     const [profile, setProfile] = useState<any>({});
     const [isLoading, setIsLoading] = useState<boolean>(false);
     useEffect(() => {
-        console.log("🆕 TalentCard received props:", props);
+        // console.log("🆕 TalentCard received props:", props);
         if (props.applicantId) {
             getProfile(props.applicantId)
                 .then((res) => {
@@ -67,7 +67,7 @@ const TalentCard = (props: any) => {
                 interviewDate.setHours(hours, minutes, 0, 0);
 
                 const interviewTimeISO = interviewDate.toISOString();
-                console.log("📅 Sending Interview Time:", interviewTimeISO);
+                // console.log("📅 Sending Interview Time:", interviewTimeISO);
 
                 interview = {
                     ...interview,
@@ -83,7 +83,7 @@ const TalentCard = (props: any) => {
                     interviewLocation: location,
                 };
 
-                await fetch("http://localhost:8080/users/sendInterviewEmail", {
+                await fetch("https://private-job-portal.onrender.com/users/sendInterviewEmail", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(emailPayload),

@@ -8,7 +8,11 @@ const formatDate=(dateString: string)=>{
 const timeAgo = (timestamp: string): string => {
     const now = new Date();
     const postDate = new Date(timestamp);
-    const seconds = Math.floor((now.getTime() - postDate.getTime()) / 1000); // Convert to seconds
+
+    // Convert postDate to IST (+5:30 shift)
+    const postDateIST = new Date(postDate.getTime() + (330 * 60 * 1000));
+
+    const seconds = Math.floor((now.getTime() - postDateIST.getTime()) / 1000); // Convert to seconds
 
     if (seconds < 60) return `${seconds} second${seconds !== 1 ? "s" : ""} ago`;
 
@@ -30,6 +34,7 @@ const timeAgo = (timestamp: string): string => {
     const years = Math.floor(days / 365.25); // Consider leap years
     return `${years} year${years !== 1 ? "s" : ""} ago`;
 };
+
 // Convert file to Base64
 const getBase64 = (file: File): Promise<string> => {
     return new Promise((resolve, reject) => {
