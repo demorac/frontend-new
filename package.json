@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@mantine/carousel": "^7.16.2",
     "@mantine/core": "^7.16.2",
-"@mantine/carousel": "^7.16.2",
     "@mantine/dates": "^7.17.0",
     "@mantine/form": "^7.17.0",
     "@mantine/hooks": "^7.17.2",
