@@ -7,7 +7,7 @@
     "@mantine/core": "^7.16.2",
     "@mantine/dates": "^7.17.0",
     "@mantine/form": "^7.17.0",
-    "@mantine/hooks": "^7.17.2",
+    "@mantine/hooks": "^7.16.2",
     "@mantine/notifications": "^7.17.0",
     "@mantine/tiptap": "^7.17.0",
     "@reduxjs/toolkit": "^2.6.0",
